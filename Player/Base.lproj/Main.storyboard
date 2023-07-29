@@ -1,24 +1,98 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Player" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="apL-HG-GNO">
+                                <rect key="frame" x="25" y="233" width="154" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Play from Project"/>
+                                <connections>
+                                    <action selector="playFIle_action:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LMP-A0-C8v"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kc8-l8-GYs">
+                                <rect key="frame" x="74" y="328" width="60" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Stop"/>
+                                <connections>
+                                    <action selector="stop_action:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Hyi-F6-WnY"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TqE-11-oLp">
+                                <rect key="frame" x="269" y="328" width="71" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Pause"/>
+                                <connections>
+                                    <action selector="pauseaction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kez-Jn-KBE"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IRu-az-NbI">
+                                <rect key="frame" x="236" y="233" width="132" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Play from URL"/>
+                                <connections>
+                                    <action selector="playURL_action:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dqw-6T-A4N"/>
+                                </connections>
+                            </button>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Ttn-PL-vH1">
+                                <rect key="frame" x="23" y="143" width="347" height="31"/>
+                            </slider>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Yhf-dg-yvJ">
+                                <rect key="frame" x="23" y="438" width="357" height="31"/>
+                            </slider>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Kc8-l8-GYs" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="74" id="7Pb-ia-BGL"/>
+                            <constraint firstItem="IRu-az-NbI" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="apL-HG-GNO" secondAttribute="trailing" constant="8" symbolic="YES" id="9Xd-t7-dsF"/>
+                            <constraint firstItem="Kc8-l8-GYs" firstAttribute="top" secondItem="apL-HG-GNO" secondAttribute="bottom" constant="60" id="AOr-b0-mIc"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="IRu-az-NbI" secondAttribute="trailing" constant="25" id="F6j-wm-Xg0"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Yhf-dg-yvJ" secondAttribute="trailing" constant="15" id="FkQ-0X-x3o"/>
+                            <constraint firstItem="IRu-az-NbI" firstAttribute="top" secondItem="Ttn-PL-vH1" secondAttribute="bottom" constant="60" id="HhR-ht-a8g"/>
+                            <constraint firstItem="apL-HG-GNO" firstAttribute="top" secondItem="Ttn-PL-vH1" secondAttribute="bottom" constant="60" id="Hxg-Tq-9iX"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Ttn-PL-vH1" secondAttribute="trailing" constant="25" id="LoM-Mo-DWE"/>
+                            <constraint firstItem="Yhf-dg-yvJ" firstAttribute="top" secondItem="Kc8-l8-GYs" secondAttribute="bottom" constant="75" id="YV8-dh-1IP"/>
+                            <constraint firstItem="TqE-11-oLp" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Kc8-l8-GYs" secondAttribute="trailing" constant="8" symbolic="YES" id="ad1-oK-dp3"/>
+                            <constraint firstItem="TqE-11-oLp" firstAttribute="top" secondItem="IRu-az-NbI" secondAttribute="bottom" constant="60" id="dV3-8o-D6C"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="TqE-11-oLp" secondAttribute="trailing" constant="53" id="mPi-Vt-nsU"/>
+                            <constraint firstItem="Ttn-PL-vH1" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="84" id="qpe-lN-SvU"/>
+                            <constraint firstItem="Yhf-dg-yvJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="25" id="sm9-SE-ANo"/>
+                            <constraint firstItem="Ttn-PL-vH1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="25" id="wTX-Et-aIy"/>
+                            <constraint firstItem="apL-HG-GNO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="25" id="zLg-Gb-gRl"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="pauseButton" destination="TqE-11-oLp" id="orG-Sb-cYM"/>
+                        <outlet property="playFromProjectButton" destination="apL-HG-GNO" id="dD6-Fb-JsB"/>
+                        <outlet property="playFromURLButton" destination="IRu-az-NbI" id="j6G-kf-135"/>
+                        <outlet property="progressSlider" destination="Ttn-PL-vH1" id="Rni-PN-QfK"/>
+                        <outlet property="stopButton" destination="Kc8-l8-GYs" id="kY3-70-I7k"/>
+                        <outlet property="volumeSilder" destination="Yhf-dg-yvJ" id="eS9-87-vXB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="43.511450381679388" y="3.5211267605633805"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>

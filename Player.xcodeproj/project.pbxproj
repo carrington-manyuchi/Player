@@ -14,6 +14,7 @@
 		8C37E78D2A74DEDC009BC7A7 /* Player.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8C37E78B2A74DEDC009BC7A7 /* Player.xcdatamodeld */; };
 		8C37E78F2A74DEDD009BC7A7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8C37E78E2A74DEDD009BC7A7 /* Assets.xcassets */; };
 		8C37E7922A74DEDD009BC7A7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C37E7902A74DEDD009BC7A7 /* LaunchScreen.storyboard */; };
+		8C37E79A2A74E18D009BC7A7 /* wandakada.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8C37E7992A74E18D009BC7A7 /* wandakada.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		8C37E78E2A74DEDD009BC7A7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8C37E7912A74DEDD009BC7A7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8C37E7932A74DEDD009BC7A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8C37E7992A74E18D009BC7A7 /* wandakada.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = wandakada.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +63,7 @@
 				8C37E7822A74DEDC009BC7A7 /* AppDelegate.swift */,
 				8C37E7842A74DEDC009BC7A7 /* SceneDelegate.swift */,
 				8C37E7862A74DEDC009BC7A7 /* ViewController.swift */,
+				8C37E7992A74E18D009BC7A7 /* wandakada.mp3 */,
 				8C37E7882A74DEDC009BC7A7 /* Main.storyboard */,
 				8C37E78E2A74DEDD009BC7A7 /* Assets.xcassets */,
 				8C37E7902A74DEDD009BC7A7 /* LaunchScreen.storyboard */,
@@ -131,6 +134,7 @@
 				8C37E7922A74DEDD009BC7A7 /* LaunchScreen.storyboard in Resources */,
 				8C37E78F2A74DEDD009BC7A7 /* Assets.xcassets in Resources */,
 				8C37E78A2A74DEDC009BC7A7 /* Main.storyboard in Resources */,
+				8C37E79A2A74E18D009BC7A7 /* wandakada.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
